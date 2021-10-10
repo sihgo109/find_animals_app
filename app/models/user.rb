@@ -13,4 +13,8 @@ class User < ApplicationRecord
   validates :profile, presence: true
   validates :prefecture, presence: true
 
+
+  has_many :animals
+  has_many :comments
+
 end

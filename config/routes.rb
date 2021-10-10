@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'calendars/index'
   devise_for :users
   root to: "animals#index"
 
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   end
   resources :messages, :only => [:create]
   resources :rooms, :only => [:create, :show, :index]
+  resource :calendars
 end

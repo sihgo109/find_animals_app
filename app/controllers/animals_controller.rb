@@ -3,7 +3,7 @@ class AnimalsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @animals = Animal.all
+    @animals = Animal.includes(:user).order("created_at DESC")
   end
 
   def new

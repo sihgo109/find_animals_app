@@ -8,7 +8,7 @@
     <p class="card__summary">
       <%= animal.charm_point %>
     </p>
-    <%= link_to "By #{animal.user.nickname}", root_path(animal.user_id), class: :card__user %>
+    <%= link_to "By #{animal.user.nickname}", user_path(animal.user_id), class: :card__user %>
   </div>
 </div>
 

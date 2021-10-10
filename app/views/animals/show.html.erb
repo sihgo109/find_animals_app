@@ -2,9 +2,9 @@
   <div class="inner">
     <div class="animal__wrapper">
       <p class="animal__hedding">
-        <%= "プロトタイプのタイトル"%>
+        <%= "🐾#{@animal.name}の募集記事🐾" %>
       </p>
-      <%= link_to "by プロトタイプの投稿者", root_path, class: :animal__user %>
+      <%= link_to "by #{@animal.user.nickname}", user_path(@animal.user), class: :animal__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @animal.user_id %>
         <div class="animal__manage">
@@ -64,7 +64,7 @@
           <% @comments.each do |comment| %>
              <li class="comments_list"> 
                <%= comment.text %>
-               <%= link_to "(#{comment.user.nickname})", root_path(comment.user), class: :comment_user %> 
+               <%= link_to "(#{comment.user.nickname})", user_path(comment.user), class: :comment_user %> 
              </li> 
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>

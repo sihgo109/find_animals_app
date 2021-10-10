@@ -18,6 +18,8 @@ class AnimalsController < ApplicationController
 
   def show
     @animal = Animal.find(params[:id])
+    @comment = Comment.new
+    @comments = @animal.comments.includes(:user)
   end
 
   def edit

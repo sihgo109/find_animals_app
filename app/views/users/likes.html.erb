@@ -35,10 +35,29 @@
 
 
       <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの投稿一覧" %>
+        <%= "#{@user.nickname}さんがいいねした投稿" %>
       </h2>
       <div class="user__card">
-        <%= render partial: 'animals/animal', collection: @user.animals %>
+        
+        <% @likes.each do |like| %>
+        <% animal = Animal.find_by(id: like.animal_id) %>
+        <% render partial: 'animals/animal', collection: @user.animals %>
+
+      </div>
+      <div class="card">
+        <%= link_to image_tag(animal.image, class: :card__img ), animal_path(animal.id)%>
+        <div class="card__body">
+          <%= link_to animal.name, animal_path(animal.id), class: :card__title%>
+          <p class="card__summary">
+            <%= animal.charm_point %>
+          </p>
+          <%= link_to "By #{animal.user.nickname}", user_path(animal.user_id), class: :card__user %>
+        </div>
+      </div>
+
+    <% end %>
+
+    
       </div>
 
     </div>

@@ -23,6 +23,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     @comment = Comment.new
     @comments = @animal.comments.includes(:user)
+    @likes_count = Like.where(animal_id: @animal.id).count
   end
 
   def edit

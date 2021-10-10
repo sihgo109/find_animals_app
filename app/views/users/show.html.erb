@@ -28,10 +28,12 @@
         </tbody>
       </table>
 
-      <ul class="user-tabs">
-        <li class="active"><%= link_to("投稿記事", "/users/#{@user.id}") %></li>
-        <li><%= link_to("いいね!した記事", "/users/#{@user.id}/likes") %></li>
-      </ul>
+      <div class="like-contents">
+        <ul class="user-tabs">
+          <li class="active"><%= link_to("投稿記事", "/users/#{@user.id}") %></li>
+          <li><%= link_to("いいね!した記事", "/users/#{@user.id}/likes") %></li>
+        </ul>
+      </div>
 
 
       <h2 class="page-heading">
@@ -41,6 +43,21 @@
         <%= render partial: 'animals/animal', collection: @user.animals %>
       </div>
 
-    </div>
+      <div class="message-send">
+      <% if @user.id == current_user.id %>
+
+      <% else %>
+        <% if @isRoom == true %>
+          <h2><a href="/rooms/<%= @roomId %>">メッセージを送る</a></h2>
+        <% else %>
+          <%= form_for @room do |f| %>
+            <%= fields_for @entry do |e| %>
+              <%= e.hidden_field :user_id, :value=> @user.id %>
+            <% end %>
+            <%= f.submit "メッセージを送る" %>
+          <% end %>
+        <% end %>
+      <% end %>
+      </div>
   </div>
 </div>

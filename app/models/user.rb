@@ -16,5 +16,7 @@ class User < ApplicationRecord
 
   has_many :animals
   has_many :comments
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 
 end

@@ -3,7 +3,8 @@
 
     <% if user_signed_in? %>
       <div class="greeting">
-        <%= link_to "🐾#{current_user.nickname} さんとしてログインしています🐾", "/users/#{current_user.id}", class: :greeting__link%>
+        <%= link_to "🐾#{current_user.nickname} ", "/users/#{current_user.id}", class: :greeting__link%>
+        さんとしてログインしています🐾
       </div>
       <% end %>
 

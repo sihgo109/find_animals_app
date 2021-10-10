@@ -121,6 +121,15 @@ a {
   max-height: 500px;
 }
 
+.card__body {
+  text-align: center;
+  background-color: orange;
+  padding: 5px;
+  border-radius: 10px;
+  inline-size: 50%;
+  margin: 0 auto;
+}
+
 /* FOOTER */
 
 .footer {

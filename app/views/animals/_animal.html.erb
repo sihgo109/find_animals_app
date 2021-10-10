@@ -1,9 +1,10 @@
 <div class="card">
   <%= link_to image_tag(animal.image, class: :card__img ), animal_path(animal.id)%>
   <div class="card__body">
-    <%= link_to animal.name, animal_path(animal.id), class: :card__title%>
+
+    <%= link_to "お名前：#{animal.name}", animal_path(animal.id), class: :card__title%>
     <p class="card__summary">
-      <%= animal.charm_point %>
+      <%= "チャームポイント：#{animal.charm_point}" %>
     </p>
     <%= link_to "By #{animal.user.nickname}", user_path(animal.user_id), class: :card__user %>
   </div>

@@ -10,5 +10,5 @@ class Animal < ApplicationRecord
   validates :birthday, presence: true
   validates :age, presence: true
   validates :prefecture, presence: true
-  validates :charm_point, presence: trues
+  validates :charm_point, presence: true
 end

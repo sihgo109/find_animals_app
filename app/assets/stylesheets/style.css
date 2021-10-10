@@ -136,6 +136,15 @@ a {
   border-radius: 10px;
   inline-size: 50%;
   margin: 0 auto;
+  color: white;
+}
+
+.card__title {
+  color: white;
+}
+
+.card__user {
+  color: white;
 }
 
 /* FOOTER */

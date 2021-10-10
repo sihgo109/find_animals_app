@@ -101,6 +101,14 @@ a {
   background-color: lightgray;
 }
 
+.greeting__link {
+  color: navy;
+}
+
+.greeting {
+  color: navy;
+}
+
 .card__wrapper { 
   display: flex;
   flex-wrap: wrap;

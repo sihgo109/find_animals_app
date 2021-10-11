@@ -1,16 +1,13 @@
-<main class="main">
-<div class="wrapper">
-
-    
-
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h2 class="page-heading">新規投稿</h2>
-        <%# 部分テンプレートでフォームを表示する %>
-        <%= render partial: "form", locals: { animal: @animal } %>
+<main class="new_article_main">
+  <div class="wrapper">
+    <div class="main">
+      <div class="new_article_inner">
+        <div class="form__wrapper">
+          <h2 class="page-heading">新規投稿</h2>
+          <%# 部分テンプレートでフォームを表示する %>
+          <%= render partial: "form", locals: { animal: @animal } %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 </main>

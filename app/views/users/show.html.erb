@@ -1,10 +1,11 @@
 <div class="main">
+  <div class="main-user">
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんのページ"%>
         <div class="edit-account">
-          <%= link_to "アカウント編集", edit_user_path(current_user) %>
+          <%= link_to "アカウント編集", edit_user_path(current_user), class: :edit_account %>
         </div>
       </h2>
       <table class="table">
@@ -30,8 +31,8 @@
 
       <div class="like-contents">
         <ul class="user-tabs">
-          <li class="active"><%= link_to("投稿記事", "/users/#{@user.id}") %></li>
-          <li><%= link_to("いいね!した記事", "/users/#{@user.id}/likes") %></li>
+          <li class="active"><%= link_to("🐾投稿記事🐾", "/users/#{@user.id}") %></li>
+          <li class="active"><%= link_to("☆いいね!した記事☆", "/users/#{@user.id}/likes") %></li>
         </ul>
       </div>
 
@@ -59,5 +60,7 @@
         <% end %>
       <% end %>
       </div>
+      </div>
   </div>
+ </div>
 </div>

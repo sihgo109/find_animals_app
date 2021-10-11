@@ -22,7 +22,7 @@
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
              <div class="nav__right">
-              
+              <%= link_to "マイページ", "/users/#{current_user.id}", class: :nav__article %>
               <%= link_to "イベント", calendars_index_path, class: :nav__article %>
               <%= link_to "新規投稿", new_animal_path, class: :nav__article %>
               <%= link_to "ユーザ一覧", users_path, class: :nav__article %>

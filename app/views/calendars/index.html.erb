@@ -1,30 +1,36 @@
-<%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
-  <div class="event_date">
-    <%= f.label :日付を選択, class: 'lavel' %>
-    <%= f.date_field :date, class: 'date-select' %>
-  </div>
-  <div class="input-plan">
-    <%= f.label :予定を入力, class: 'lavel' %>
-    <%= f.text_area :plan, class: 'text-input' %>
-  </div>
-  <div class="save_btn">
-    <%= f.submit '保存' %>
-  </div>
-<% end %>
-
-<div class='calendar'>
-  <% @week_days.each do |day| %>
-    <div class='item'>
-      <div class='date'>
-        <%= day[:month] %>/<%= day[:date] %>
-      </div>
-      <ul class='content'>
-        <% if day[:plans].length != 0 %>
-          <% day[:plans].each do |plan| %>
-            <li class='plan-list'>・<%= plan %></li>
-          <% end %>
-        <% end %>
-      </ul>
+<div class="main-wrapper">
+  <div class="main_header">
+    <div class="plan_input">
+      <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
+        <div class="event_date">
+          <%= f.label :日付を選択, class: 'lavel' %>
+          <%= f.date_field :date, class: 'date-select' %>
+        </div>
+        <div class="input-plan">
+          <%= f.label :予定を入力, class: 'lavel' %>
+          <%= f.text_area :plan, class: 'text-input' %>
+        </div>
+        <div class="save__btn">
+          <%= f.submit '保存', class: 'save_btn' %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
+
+  <div class='calendar'>
+    <% @week_days.each do |day| %>
+      <div class='item'>
+        <div class='date'>
+          <%= day[:month] %>/<%= day[:date] %>
+        </div>
+        <ul class='content'>
+          <% if day[:plans].length != 0 %>
+            <% day[:plans].each do |plan| %>
+              <li class='plan-list'>・<%= plan %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 </div>

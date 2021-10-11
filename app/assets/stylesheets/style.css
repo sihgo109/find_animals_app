@@ -90,18 +90,27 @@ a {
 }
 
 
+
 /* TOPページ */
 
 .main {
   background-color: lightgray;
+  background-image: url(/trailtravelers-15-10.jpeg);
+  background-size: cover;
 }
 
 .greeting__link {
   color: navy;
+  font-size: 25px;
+}
+
+.foot-mark {
+  font-size: 25px;
 }
 
 .greeting {
   color: navy;
+  padding: 5px 30px;
 }
 
 .card__wrapper { 
@@ -142,9 +151,256 @@ a {
   color: white;
 }
 
+/* 新規投稿ページ */
+
+.new_article_inner {
+  padding-left: 40px;
+  color: navy;
+}
+
+.form__btn {
+  color: white;
+  font-weight: bold;
+}
+
+/* 記事詳細ページ */
+
+.animal__hedding {
+  color: navy;
+  padding: 5px 30px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.animal__user {
+  color: navy;
+  padding: 50px;
+}
+
+.animal__wrapper {
+  text-align: center;
+}
+
+.animal__image {
+  margin-bottom: 30px;
+}
+
+.animal__body {
+  color: white;
+  background-color: orange;
+  border-radius: 15px;
+  inline-size: 500px;
+  width: 35%;
+  margin: 0 auto;
+}
+.animal__comments {
+  padding-left: 100px;
+  background-color: rgb(241, 205, 136);
+  border-radius: 20px;
+  inline-size: 80%;
+  margin: 0 auto;
+}
+
+.comment_form {
+  width: 50px;
+}
+
+.comment_input {
+  width: 65%;
+}
+
+.comment_text {
+  width: 80px;
+}
+
+.form__btn {
+  background-color: orange;
+  border-radius: 10px;
+  margin-left: 15px;
+  width: 200px;
+}
+
+.animal__btn {
+  color: white;
+  background-color: rgb(247, 192, 92);
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+
+/* ユーザーログインページ */
+.form__wrapper {
+  padding-left: 40px;
+  height: 100vh;
+}
+
+
+/* ユーザ詳細ページ */
+.main-user {
+  text-align: center;
+  padding-left: 40px;
+
+}
+.table {
+  color: white;
+  background-color: rgb(240, 182, 75);
+  border-radius: 15px;
+  inline-size: 400px;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.page-heading {
+  color: navy;
+}
+
+.edit_account {
+  color: white;
+  font-size: 15px;
+  background-color: orange;
+  border-radius: 5px;
+  padding: 2px;
+
+}
+
+.user-tabs {
+  display: flex;
+  margin-left: 39%;
+}
+
+.active a {
+  padding-right: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.like_contents_btn {
+  color: white;
+}
+
+.user__card {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.message-send a {
+  color: white;
+  background-color: green;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+/* お気に入りページ */
+
+
+
+/* イベントページ */
+.main-wrapper {
+  padding-left: 30px;
+  background-color: lightgray;
+}
+
+.main_header {
+  display: flex;
+}
+
+/* .input-plan {
+  display: flex;
+} */
+
+.save_btn {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 60px;
+  margin-left: 35px
+}
+
+.lavel {
+  background-color: orange;
+  border-radius: 5px;
+  color: navy;
+
+}
+
+
+/* ユーザー一覧ページ */
+.users_list {
+padding-left: 30px;
+background-color: lightgray;
+background-image: url(/20170916194246.jpeg);
+background-size: cover;
+height: 100vh;
+}
+
+.users {
+  color: navy;
+  background-color: orange;
+  display: inline;
+  border-radius: 10px;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.current_user_nav {
+  font-size: 18px;
+  border-bottom: 1px solid orange;
+  display: inline;
+  margin: 10px 0;
+  color: white;
+}
+
+.users_list a {
+  color: navy;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+/* メッセージページ */
+.message_main {
+  height: 100vh;
+  background-color: lightgrey;
+  padding-left: 30px;
+}
+
+.message_header h1 {
+  color: navy;
+  font-size: 30px;
+}
+
+.message_users {
+  color: navy;
+  background-color: orange;
+  display: inline-block;
+  width: 25%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.messages_content {
+  color: navy;
+}
+
+.messages_content small {
+  color: navy;
+}
+
+.messages_content a {
+  color: navy;
+}
+
+.send_form textarea {
+  width: 350px;
+}
+
+.send_form s{
+  color: white;
+}
+
 /* FOOTER */
 
-.footer {
+footer {
   background-color: navy;
   color: white;
   text-align: center;

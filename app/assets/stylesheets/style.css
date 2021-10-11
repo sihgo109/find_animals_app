@@ -340,6 +340,7 @@ height: 100vh;
   border-radius: 10px;
   font-size: 25px;
   margin-bottom: 10px;
+  
 }
 
 .current_user_nav {
@@ -348,6 +349,7 @@ height: 100vh;
   display: inline;
   margin: 10px 0;
   color: white;
+  margin: 20px 0;
 }
 
 .users_list a {
@@ -355,6 +357,7 @@ height: 100vh;
   border: 1px solid black;
   border-radius: 5px;
   background-color: orange;
+  margin: 10px 0;
 }
 
 /* メッセージページ */

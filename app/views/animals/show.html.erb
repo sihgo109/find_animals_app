@@ -43,10 +43,7 @@
             <%= @animal.charm_point %>
           </p>
         </div>
-      </div>
-      </div>
-
-      <%# いいね機能 %>
+        <%# いいね機能 %>
       <% if Like.find_by(user_id: current_user.id, animal_id: @animal.id) %>
         <%= link_to("/likes/#{@animal.id}/destroy", {method: "post"}) do %>
           <span class="fa fa-heart like-btn-unlike"></span>
@@ -56,7 +53,11 @@
           <span class="fa fa-heart like-btn"></span>
         <% end %>
       <% end %>
-      <%= @likes_count %>
+      <span><%= @likes_count %>いいね!</span>
+      </div>
+      </div>
+
+      
 
       <%# コメント機能 %>
       <div class="animal__comments">
@@ -73,7 +74,7 @@
           <% end %>
         <% end %>
 
-          <%# コメント機能 %>
+    
 
           <ul class="comments_lists">
             <% @comments.each do |comment| %>

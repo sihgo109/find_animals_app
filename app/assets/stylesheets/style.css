@@ -292,6 +292,15 @@ a {
   border-radius: 10px;
 }
 
+.new_room input {
+  color: white;
+  background-color: green;
+  margin: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /* お気に入りページ */
 
 

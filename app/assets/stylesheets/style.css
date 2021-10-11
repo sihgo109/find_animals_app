@@ -235,10 +235,12 @@ a {
 
 
 /* ユーザ詳細ページ */
+
+
 .main-user {
   text-align: center;
   padding-left: 40px;
-
+  
 }
 .table {
   color: white;

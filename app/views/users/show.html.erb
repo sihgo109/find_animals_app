@@ -2,12 +2,14 @@
   <div class="main-user">
   <div class="inner">
     <div class="user__wrapper">
+
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんのページ"%>
         <div class="edit-account">
           <%= link_to "アカウント編集", edit_user_path(current_user), class: :edit_account %>
         </div>
       </h2>
+
       <table class="table">
         <tbody>
           <tr>
@@ -59,8 +61,8 @@
           <% end %>
         <% end %>
       <% end %>
-      </div>
-      </div>
+     
+    </div>
   </div>
  </div>
 </div>

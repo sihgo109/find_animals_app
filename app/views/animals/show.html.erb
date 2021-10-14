@@ -44,20 +44,20 @@
           </p>
         </div>
         <%# いいね機能 %>
-      <% if Like.find_by(user_id: current_user.id, animal_id: @animal.id) %>
-        <%= link_to("/likes/#{@animal.id}/destroy", {method: "post"}) do %>
-          <span class="fa fa-heart like-btn-unlike"></span>
+        <% if user_signed_in? %>
+          <% if Like.find_by(user_id: current_user.id, animal_id: @animal.id) %>
+            <%= link_to("/likes/#{@animal.id}/destroy", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn-unlike"></span>
+            <% end %>
+          <% else %>
+            <%= link_to("/likes/#{@animal.id}/create", {method: "post"}) do %>
+              <span class="fa fa-heart like-btn"></span>
+            <% end %>
+          <% end %>
+          <span><%= @likes_count %>いいね!</span>
+          </div>
+          </div>
         <% end %>
-      <% else %>
-        <%= link_to("/likes/#{@animal.id}/create", {method: "post"}) do %>
-          <span class="fa fa-heart like-btn"></span>
-        <% end %>
-      <% end %>
-      <span><%= @likes_count %>いいね!</span>
-      </div>
-      </div>
-
-      
 
       <%# コメント機能 %>
       <div class="animal__comments">
@@ -73,8 +73,6 @@
             </div>
           <% end %>
         <% end %>
-
-    
 
           <ul class="comments_lists">
             <% @comments.each do |comment| %>

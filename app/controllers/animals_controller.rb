@@ -28,6 +28,10 @@ class AnimalsController < ApplicationController
 
   def edit
     @animal = Animal.find(params[:id])
+    if user_signed_in? && current_user == @animal.user.id
+    else
+      redirect_to animal_path
+    end
   end
 
   def update

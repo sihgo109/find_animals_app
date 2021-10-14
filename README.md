@@ -1,24 +1,57 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名
+Find_Animals_App
 
-Things you may want to cover:
+## アプリケーション概要
+保護動物の里親探し
+及び引き取りを目的としたアプリケーション
 
-* Ruby version
+## URL
+###Find-Animals-App  Heroku
+https://find-animals-app.herokuapp.com/
 
-* System dependencies
+###Find-Animals-App AWS
+http://54.248.107.237/
 
-* Configuration
+## テスト用アカウント
+ID: testuser
+PW: sihgo123456
 
-* Database creation
+## 利用方法
+新規ユーザ登録
+ユーザ情報編集
+里親募集記事の閲覧
+保護主へのアプローチ、コメント、DM
+新規募集記事の投稿
+募集記事詳細の閲覧、いいね機能
+イベントスケジュールの閲覧
 
-* Database initialization
+## 目指した課題解決
+保護している方の譲渡先の手助け
+受け取り側への認知
+気になった動物の登録
+DMにて詳細な連絡の実現
 
-* How to run the test suite
+## 洗い出した要件
+ユーザ管理機能	ユーザを管理することにより不正を防ぐ
+ログイン・ログアウト機能	ログインユーザと未ログインユーザによりサービス内容を制限
+記事投稿機能	保護動物等を認識してもらうため
+記事管理機能	常時更新できる記事で最新の情報が維持できる
+お気に入り管理機能	気になる動物の情報をキャッチアップするため
+ダイレクトメッセージ機能	個人情報などの取り扱いが発生するため1対1の環境の導入
+イベントスケジュール機能	より肌で感じるためにはイベントに参加していただくことを目的として設置
 
-* Services (job queues, cache servers, search engines, etc.)
+## 実装した機能についての画像やGIFおよびその説明
+[![Image from Gyazo](https://i.gyazo.com/f48dcea1060ad805dc42e99d27e5c8e1.jpg)](https://gyazo.com/f48dcea1060ad805dc42e99d27e5c8e1)
 
-* Deployment instructions
+[![Image from Gyazo](https://i.gyazo.com/ddca00ea4201a4f8c862937d7b58a5f5.jpg)](https://gyazo.com/ddca00ea4201a4f8c862937d7b58a5f5)
 
-* ...
+## 実装予定の機能
+洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記述。
+
+## データベース設計
+ER図等を添付。
+
+## ローカルでの動作方法
+git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。この時、アプリケーション開発に使用した環境を併記することを忘れないこと（パッケージやRubyのバージョンなど）。

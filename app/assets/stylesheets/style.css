@@ -301,6 +301,15 @@ a {
   cursor: pointer;
 }
 
+/* ユーザ編集ページ*/
+
+.account-page {
+  padding-left: 55px;
+  padding-bottom: 20px;
+  color: navy;
+  font-weight: bold;
+}
+
 /* お気に入りページ */
 
 

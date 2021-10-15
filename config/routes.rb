@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  get 'calendars/index'
-  devise_for :users
+  
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
+  }
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+  end
+  post '/animals/guest_sign_in', to: 'animals#guest_sign_in'
   root to: "animals#index"
 
   
@@ -8,6 +15,7 @@ Rails.application.routes.draw do
   post "likes/:animal_id/destroy" => "likes#destroy"
 
   get "users/:id/likes" => "users#likes"
+  get 'calendars/index'
 
   resources :users
   resources :animals do

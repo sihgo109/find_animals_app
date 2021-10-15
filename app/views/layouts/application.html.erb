@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find Animals</title>
+    <title>🐾tFind Animals🐾</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,9 +17,9 @@
         <div class="nav">
           <div class="nav__left">
             <%# link_to image_tag("logo.png", class: :logo), root_path %>
-            <%= link_to "Find Animals", root_path, class: :title__btn %>
+            <%= link_to "🐾Find Animals🐾", root_path, class: :title__btn %>
           </div>
-          <%# ログインしているときは以下を表示するようにしましょう %>
+
           <% if user_signed_in? %>
              <div class="nav__right">
               <%= link_to "マイページ", "/users/#{current_user.id}", class: :nav__article %>
@@ -28,15 +28,15 @@
               <%= link_to "ユーザ一覧", users_path, class: :nav__article %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
              </div>
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
+
           <% else %>
             <div class="nav__right">
+              <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: :nav__btn %>
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
             <% end %>
-          <%# // ログインしていないときは上記を表示するようにしましょう %>
+
         </div>
       </div>
     </header>

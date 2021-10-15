@@ -27,8 +27,6 @@ class UsersController < ApplicationController
     end
   end
     
-  
-
   def new
     @user = User.new
   end
@@ -48,6 +46,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @likes = Like.where(user_id: @user.id)
   end
+
 
   private
 

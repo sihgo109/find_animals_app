@@ -101,20 +101,20 @@ a {
   background-color: orange;
   display: inline-block;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .body-content {
   background-color: orange;
   display: inline-block;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .footer-content {
   background-color: orange;
   display: inline-block;
   border-radius: 10px;
-  margin-top: 5px;
+
 }
 
 /* TOPページ */

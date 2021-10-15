@@ -22,6 +22,7 @@
 
           <% if user_signed_in? %>
              <div class="nav__right">
+              <%= link_to "About", about_path, class: :nav__btn %>
               <%= link_to "マイページ", "/users/#{current_user.id}", class: :nav__article %>
               <%= link_to "イベント", calendars_index_path, class: :nav__article %>
               <%= link_to "新規投稿", new_animal_path, class: :nav__article %>
@@ -31,6 +32,7 @@
 
           <% else %>
             <div class="nav__right">
+              <%= link_to "About", about_path, class: :nav__btn %>
               <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: :nav__btn %>
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>

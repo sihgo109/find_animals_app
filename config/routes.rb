@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   post '/animals/guest_sign_in', to: 'animals#guest_sign_in'
   root to: "animals#index"
+  get "about" => "animals#about"
 
   
   post "likes/:animal_id/create" => "likes#create"

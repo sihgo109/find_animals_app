@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :about]
-  before_action :move_to_index, except: [:index, :show, :about]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @animals = Animal.includes(:user).order("created_at DESC")
@@ -8,9 +8,6 @@ class AnimalsController < ApplicationController
 
   def new
     @animal = Animal.new
-  end
-
-  def about
   end
 
   def create

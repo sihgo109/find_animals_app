@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :about]
   before_action :move_to_index, except: [:index, :show, :about]
-  before_action :protect_article, only: [:edit, :destroy]
+  before_action :protect_article, only: [:edit, :destroy, :update]
 
   def index
     @animals = Animal.includes(:user).order("created_at DESC")

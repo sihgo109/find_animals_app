@@ -1,7 +1,7 @@
 class AnimalsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :about]
   before_action :move_to_index, except: [:index, :show, :about]
-  before_action :protect_article, only: [:edit, :destroy, :update]
+
 
   def index
     @animals = Animal.includes(:user).order("created_at DESC")
@@ -63,12 +63,6 @@ class AnimalsController < ApplicationController
       redirect_to action: :index
     end
   end
-
-  def protect_article
-    unless Animal.find(params[:id]).user.id.to_i == current_user.id
-        redirect_to animal_path
-    end
-   end
   
 
 end

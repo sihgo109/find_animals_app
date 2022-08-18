@@ -11,9 +11,6 @@ Find_Animals_App
 ###Find-Animals-App  Heroku
 https://find-animals-app.herokuapp.com/
 
-###Find-Animals-App AWS
-http://54.248.107.237/
-
 ## テスト用アカウント
 ID: testuser
 PW: sihgo123456
